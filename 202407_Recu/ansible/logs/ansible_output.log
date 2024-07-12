@@ -1,0 +1,285 @@
+2024-07-12 15:12:39,803 p=7514 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:12:40,362 p=7514 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:12:40,389 p=7514 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:12:42,569 p=7514 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:12:43,324 p=7514 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:12:43,374 p=7514 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:12:43,426 p=7514 u=catalogna n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected <document start>
+
+The error appears to be in '/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/main.yml': line 4, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: "Rol: 2PRecuperatorio"
+ ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2024-07-12 15:18:15,105 p=7877 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:18:15,275 p=7877 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:18:15,283 p=7877 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:18:16,609 p=7877 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:18:17,252 p=7877 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:18:17,300 p=7877 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:18:17,351 p=7877 u=catalogna n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected <document start>
+
+The error appears to be in '/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/main.yml': line 4, column 2, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+ - name: "Rol: 2PRecuperatorio"
+ ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2024-07-12 15:19:44,148 p=8142 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:19:44,319 p=8142 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:19:44,327 p=8142 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:19:46,140 p=8142 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:19:46,668 p=8142 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:19:46,716 p=8142 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:19:46,769 p=8142 u=catalogna n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/main.yml': line 2, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+--
+- name: Rol: 2PRecuperatorio
+      ^ here
+
+2024-07-12 15:21:03,180 p=8405 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:21:03,357 p=8405 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:21:03,365 p=8405 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:21:04,695 p=8405 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:21:05,416 p=8405 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:21:05,466 p=8405 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:21:05,517 p=8405 u=catalogna n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/main.yml': line 2, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+--
+- name: "Rol: 2PRecuperatorio"
+      ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2024-07-12 15:24:34,209 p=8680 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:24:34,382 p=8680 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:24:34,390 p=8680 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:24:35,718 p=8680 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:24:36,349 p=8680 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:24:36,397 p=8680 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:24:36,450 p=8680 u=catalogna n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/main.yml': line 2, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+--
+- name: "Rol: 2PRecuperatorio"
+      ^ here
+This one looks easy to fix. It seems that there is a value started
+with a quote, and the YAML parser is expecting to see the line ended
+with the same kind of quote. For instance:
+
+    when: "ok" in result.stdout
+
+Could be written as:
+
+   when: '"ok" in result.stdout'
+
+Or equivalently:
+
+   when: "'ok' in result.stdout"
+
+2024-07-12 15:28:38,494 p=8963 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:28:38,667 p=8963 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:28:38,676 p=8963 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:28:39,996 p=8963 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:28:40,637 p=8963 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:28:40,686 p=8963 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:28:40,766 p=8963 u=catalogna n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] *****************************************************
+2024-07-12 15:28:40,786 p=8963 u=catalogna n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:28:40,796 p=8963 u=catalogna n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:28:40,808 p=8963 u=catalogna n=ansible | TASK [2PRecuperatorio : Incluir variables] ********************************************************
+2024-07-12 15:28:40,828 p=8963 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:28:40,838 p=8963 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:28:40,849 p=8963 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio /tmp/alumno si no existe] ********************************
+2024-07-12 15:28:41,253 p=8963 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:28:41,298 p=8963 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:28:41,310 p=8963 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio dentro de /tmp/alumno] ***********************************
+2024-07-12 15:28:41,557 p=8963 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:28:41,620 p=8963 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:28:41,632 p=8963 u=catalogna n=ansible | TASK [2PRecuperatorio : Agregar archivo desde template] *******************************************
+2024-07-12 15:28:41,718 p=8963 u=catalogna n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-07-12 15:28:41,719 p=8963 u=catalogna n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access '2PRecuperatorio.j2'\nSearched in:\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/2PRecuperatorio.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-07-12 15:28:41,727 p=8963 u=catalogna n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-07-12 15:28:41,728 p=8963 u=catalogna n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "Could not find or access '2PRecuperatorio.j2'\nSearched in:\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/roles/2PRecuperatorio/tasks/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/templates/2PRecuperatorio.j2\n\t/home/catalogna/UTN-FRA_SO_Examenes/202407_Recu/ansible/2PRecuperatorio.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-07-12 15:28:41,729 p=8963 u=catalogna n=ansible | PLAY RECAP ****************************************************************************************
+2024-07-12 15:28:41,729 p=8963 u=catalogna n=ansible | 127.0.0.1                  : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 15:28:41,729 p=8963 u=catalogna n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 15:30:05,072 p=9383 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:30:05,244 p=9383 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:30:05,252 p=9383 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:30:06,569 p=9383 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:30:07,605 p=9383 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:30:07,656 p=9383 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:30:07,729 p=9383 u=catalogna n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] *****************************************************
+2024-07-12 15:30:07,752 p=9383 u=catalogna n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:30:07,760 p=9383 u=catalogna n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:30:07,772 p=9383 u=catalogna n=ansible | TASK [2PRecuperatorio : Incluir variables] ********************************************************
+2024-07-12 15:30:07,793 p=9383 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:30:07,803 p=9383 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:30:07,815 p=9383 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio /tmp/alumno si no existe] ********************************
+2024-07-12 15:30:08,216 p=9383 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:30:08,252 p=9383 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:30:08,264 p=9383 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio dentro de /tmp/alumno] ***********************************
+2024-07-12 15:30:08,521 p=9383 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:30:08,558 p=9383 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:30:08,570 p=9383 u=catalogna n=ansible | TASK [2PRecuperatorio : Agregar archivo desde template] *******************************************
+2024-07-12 15:30:08,682 p=9383 u=catalogna n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: . unexpected '}'
+2024-07-12 15:30:08,684 p=9383 u=catalogna n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: unexpected '}'. String: Nombre: {{NOMBRE}} Apellido; {{APELLIDO}\nDivision: {{DIVISION}}\nFecha: {{ ansible_date_time.date }}\nDistribución: {{ ansible_distribution }}\nCantidad de Cores: {{ ansible_processor_cores }}\n. unexpected '}'"}
+2024-07-12 15:30:08,699 p=9383 u=catalogna n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: . unexpected '}'
+2024-07-12 15:30:08,699 p=9383 u=catalogna n=ansible | fatal: [127.0.0.1]: FAILED! => {"changed": false, "msg": "AnsibleError: template error while templating string: unexpected '}'. String: Nombre: {{NOMBRE}} Apellido; {{APELLIDO}\nDivision: {{DIVISION}}\nFecha: {{ ansible_date_time.date }}\nDistribución: {{ ansible_distribution }}\nCantidad de Cores: {{ ansible_processor_cores }}\n. unexpected '}'"}
+2024-07-12 15:30:08,700 p=9383 u=catalogna n=ansible | PLAY RECAP ****************************************************************************************
+2024-07-12 15:30:08,701 p=9383 u=catalogna n=ansible | 127.0.0.1                  : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 15:30:08,701 p=9383 u=catalogna n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 15:31:50,979 p=9805 u=catalogna n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-07-12 15:31:51,164 p=9805 u=catalogna n=ansible | PLAY [all] ****************************************************************************************
+2024-07-12 15:31:51,173 p=9805 u=catalogna n=ansible | TASK [Gathering Facts] ****************************************************************************
+2024-07-12 15:31:52,509 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:31:53,284 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:53,333 p=9805 u=catalogna n=ansible | TASK [include_role : 2PRecuperatorio] *************************************************************
+2024-07-12 15:31:53,403 p=9805 u=catalogna n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] *****************************************************
+2024-07-12 15:31:53,423 p=9805 u=catalogna n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:31:53,433 p=9805 u=catalogna n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-12 15:31:53,445 p=9805 u=catalogna n=ansible | TASK [2PRecuperatorio : Incluir variables] ********************************************************
+2024-07-12 15:31:53,465 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:53,475 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:31:53,486 p=9805 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio /tmp/alumno si no existe] ********************************
+2024-07-12 15:31:53,875 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:31:53,924 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:53,935 p=9805 u=catalogna n=ansible | TASK [2PRecuperatorio : Crear directorio dentro de /tmp/alumno] ***********************************
+2024-07-12 15:31:54,175 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:31:54,252 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:54,263 p=9805 u=catalogna n=ansible | TASK [2PRecuperatorio : Agregar archivo desde template] *******************************************
+2024-07-12 15:31:55,037 p=9805 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:31:55,096 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:55,126 p=9805 u=catalogna n=ansible | TASK [Otra tarea] *********************************************************************************
+2024-07-12 15:31:55,146 p=9805 u=catalogna n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 15:31:55,156 p=9805 u=catalogna n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 15:31:55,167 p=9805 u=catalogna n=ansible | TASK [include_role : Instala-tools_catalogna] *****************************************************
+2024-07-12 15:31:55,289 p=9805 u=catalogna n=ansible | TASK [Instala-tools_catalogna : Instalar htop] ****************************************************
+2024-07-12 15:31:56,937 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:31:56,951 p=9805 u=catalogna n=ansible | ok: [127.0.0.1]
+2024-07-12 15:31:56,964 p=9805 u=catalogna n=ansible | TASK [Instala-tools_catalogna : Instalar net-tools] ***********************************************
+2024-07-12 15:31:58,320 p=9805 u=catalogna n=ansible | fatal: [127.0.0.1]: FAILED! => {"cache_update_time": 1720785368, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'net-tools=1.60+git20181103.0eebece-1ubuntu5'' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 10388 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stderr": "E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 10388 (apt-get)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "stderr_lines": ["E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 10388 (apt-get)", "E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?"], "stdout": "", "stdout_lines": []}
+2024-07-12 15:32:04,860 p=9805 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:32:04,875 p=9805 u=catalogna n=ansible | TASK [Instala-tools_catalogna : Instalar tmux] ****************************************************
+2024-07-12 15:32:06,072 p=9805 u=catalogna n=ansible | ok: [localhost]
+2024-07-12 15:32:06,083 p=9805 u=catalogna n=ansible | TASK [Instala-tools_catalogna : Instalar tree] ****************************************************
+2024-07-12 15:32:12,562 p=9805 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:32:12,574 p=9805 u=catalogna n=ansible | TASK [Instala-tools_catalogna : Instalar speedtest-cli] *******************************************
+2024-07-12 15:32:19,130 p=9805 u=catalogna n=ansible | changed: [localhost]
+2024-07-12 15:32:19,152 p=9805 u=catalogna n=ansible | TASK [Otra tarea] *********************************************************************************
+2024-07-12 15:32:19,178 p=9805 u=catalogna n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-12 15:32:19,221 p=9805 u=catalogna n=ansible | PLAY RECAP ****************************************************************************************
+2024-07-12 15:32:19,221 p=9805 u=catalogna n=ansible | 127.0.0.1                  : ok=8    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-12 15:32:19,221 p=9805 u=catalogna n=ansible | localhost                  : ok=13   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

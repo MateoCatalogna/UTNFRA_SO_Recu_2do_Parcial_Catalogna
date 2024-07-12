@@ -1,0 +1,25 @@
+
+- name: "Rol: 2PRecuperatorio"
+  debug:
+    msg: "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+
+- name: "Incluir variables"
+  include_vars:
+    file: vars/main.yml
+
+- name: "Crear directorio /tmp/alumno si no existe"
+  file:
+    path: "/tmp/alumno"
+    state: directory
+    mode: '0775'
+
+- name: "Crear directorio dentro de /tmp/alumno"
+  file:
+    path: "/tmp/alumno/directorio"
+    state: directory
+    mode: '0775'
+
+- name: "Agregar archivo desde template"
+  template:
+    src: 2PRecuperatorio.j2
+    dest: /tmp/alumno/datos.txt
